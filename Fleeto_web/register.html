@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src='https://www.google.com/recaptcha/api.js'></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script src="form.js"></script>
+
+		<!-- Website CSS style -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+		<title>Admin</title>
+		<script>
+		function check() {
+    var x = document.forms["MyForm"]["name"].value;
+	var y = document.forms["MyForm"]["email"].value;
+	var z = document.forms["MyForm"]["username"].value;
+	var p = document.forms["MyForm"]["password"].value;
+	var q = document.forms["MyForm"]["confirm"].value;
+    if (x == null || x == "") {
+        document.getElementById("name1").style.display = "block";
+        return false;
+    }
+
+	if (y == null || y == "") {
+         document.getElementById("email1").style.display = "block";
+        return false;
+    }
+	if (z == null || z == "") {
+        document.getElementById("username1").style.display = "block";
+        return false;
+    }
+	if (p == null || p == "") {
+        document.getElementById("password1").style.display = "block";
+        return false;
+    }
+	if (q == null || q == "") {
+        document.getElementById("password2").style.display = "block";
+        return false;
+    }
+	if(p!=q){
+		 document.getElementById("confirm-alert").style.display = "block";
+        return false;
+	}
+	
+	return true;
+}</script>
+	</head>
+	<body>
+		<div class="container">
+
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+            		<h1 class="title">Fleetio</h1>
+	               		<hr />
+	               	</div>
+	            </div>
+
+				<div class="main-login main-center">
+					<form class="form-horizontal"  name="MyForm" method="post" action="data.php"  onsubmit="return check()">
+
+
+						<div class="form-group">
+							
+							<label for="name" class="cols-sm-2 control-label" >Your Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control"  name="name" id="name"  placeholder="Enter your Name"/>
+								</div>
+							</div>
+							<h5 style="color:red;display:none" id="name1" >Name must be filled out</h5>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+							<h5 style="color:red;display:none" id="email1" >Email must be filled out</h5>
+						</div>
+
+						<div class="form-group">
+							<label for="username" class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+								</div>
+							</div>
+							<h5 style="color:red;display:none" id="username1" >User name must be filled out</h5>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+							<h5 style="color:red;display:none" id="password1" >Password must be filled out</h5>
+						</div>
+
+						<div class="form-group">
+						<h5 style="color:red;display:none" id="confirm-alert" >confirm your password correctly...</h5>
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+								</div>
+							</div>
+							<h5 style="color:red;display:none" id="password2" >Comfermation Password must be filled out</h5>
+						</div>
+
+						<div class="form-group ">
+							<button type="submit" class="btn btn-primary btn-lg btn-block login-button" name="submit" id="submit" >Register</button>
+						</div>
+						<div class="login-register">
+				            <a href="login.html" style="color:black">Login</a>
+				         </div>
+<div class="g-recaptcha" data-sitekey="6LdoeRkUAAAAAPKhmPL0kicyP9O2_fFdb0Spuj14"></div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<!--script type="text/javascript" src="assets/js/bootstrap.js"></script-->
+
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+ 
+  <title>Login</title>
+  <link href="style.css" rel="stylesheet" type="text/css"></link>
+  <script>
+		function check() {
+	var x = document.forms["MyForm"]["username"].value;
+	var y = document.forms["MyForm"]["password"].value;
+    
+	if (x == null || x == "") {
+        alert("Username must be filled out");
+        return false;
+    }
+	if (y == null || y == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+	
+	return true;
+}</script>
+
+  </head>
+  <body>
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="images/images.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin"  name="MyForm" method="post"  action="php.php" onsubmit="return check()">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" name="username" id="inputEmail" class="form-control" placeholder="User Name" >
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+				<button class="btn btn-lg btn-primary btn-block btn-signin" name="submit" id="submit" type="submit">Sign in</button>
+				<a href="register.html" class="Sign-up">Sign up</a>
+            </form><!-- /form -->
+            <a href="https://mail.google.com/mail/" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+	</body>
+</html>

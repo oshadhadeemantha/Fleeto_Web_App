@@ -1,0 +1,87 @@
+*{  
+  margin:0;
+  padding:0;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Core Sans N W01 35 Light";
+  font-weight: normal;
+  margin: .67em 0;
+  display: block;
+}
+
+#registered {
+    margin-top: 50px;
+}
+
+#registered img {
+    margin-bottom: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+#registered span {
+    clear: both;
+    display: block;
+}
+
+img {
+    margin-bottom: 20px;
+}
+
+
+
+.module{
+  position:relative;
+  top:10%;    
+  height:65%;
+  width:450px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.user {
+    color: #66d8fc;
+    font-weight: bold;
+}
+
+.userlist {
+    float:left;
+    padding: 30px;
+}
+
+.userlist span {
+    color: #0590fc;
+}
+
+::-moz-selection {
+  background: #19547c;
+}
+::selection {
+  background: #19547c;
+}
+input::-moz-selection {
+  background: #037db6;
+}
+input::selection {
+  background: #037db6;
+}
+
+body{
+  color: #fff;
+  background-color:#252A8;
+  font-family:helvetica;
+  background:url('http://clevertechie.com/img/bnet-bg.jpg') #0f2439 no-repeat center top;
+}
+
+.body-content{
+  position:relative;
+  top:20px;
+  height:700px;
+  width:800px;
+  margin-left:auto;
+  margin-right:auto; 
+  background: transparent;
+}
+

@@ -1,0 +1,344 @@
+ <!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="images/favicon.ico">
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/booking.css">
+		<!--<link rel="stylesheet" href="css/camera.css">-->
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/style1.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/superfish.js"></script>
+		<script src="js/jquery.ui.totop.js"></script>
+		<script src="js/jquery.equalheights.js"></script>
+		<script src="js/jquery.mobilemenu.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/camera.js"></script>
+		<!--[if (gt IE 9)|!(IE)]><!-->
+		<script src="js/jquery.mobile.customized.min.js"></script>
+		<!--<![endif]-->
+		<script src="booking/js/booking.js"></script>
+		<script>
+			$(document).ready(function(){
+				jQuery('#camera_wrap').camera({
+					loader: false,
+					pagination: false ,
+					minHeight: '444',
+					thumbnails: false,
+					height: '28.28125%',
+					caption: true,
+					navigation: true,
+					fx: 'mosaic'
+				});
+				$().UItoTop({ easingType: 'easeOutQuart' });
+			});
+			
+			
+		</script>
+		
+	</head>
+	<body class="page1" id="top" >
+		<div class="main">
+<!--==============================header=================================-->
+			<header>
+				<div class="menu_block ">
+					<div class="container_12">
+						<div class="grid_12">
+							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+								<ul class="sf-menu">
+									<li class="current"><a href="index.php">Home</a></li>
+									<li><a href="index-1.html">About</a></li>
+									<li><a href="index-2.html">Complains</a></li>
+									<li><a href="index-3.html">Services</a></li>
+									<li><a href="index-4.html">Contacts</a></li>
+								</ul>
+							</nav>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div><br>
+				<p align="center">
+				<img src="images/logo2.png" alt="Your Happy Family">
+				</p>
+				<div class="clear"></div>
+			</header>
+			<div class="slider_wrapper ">
+				<div id="camera_wrap" class="">
+					<div data-src="images/slide.jpg" ></div>
+					<div data-src="images/slide1.jpg" ></div>
+					<div data-src="images/slide2.jpg"></div>
+				</div>
+			</div>
+			<div class="container_12">
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="images/icon1.png" alt="">
+								<div class="extra_wrapper">Fast&amp;
+									<div class="color1">Safe</div>
+								</div>
+							</div>
+							Our fleeto management services are more fast hense we use modern technology GPS system as well as tracking system also used. First of foremost we look at the safty of product.We get the responsibility of product totally.
+							<br><br><a href="fast_safe.html" class="btn">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="images/icon2.png" alt="">
+								<div class="extra_wrapper">Best
+									<div class="color1">Prices</div>
+								</div>
+							</div>
+							We have best prices than others.Other services get more prices to pick one product in less distance. Although we are not likewise, We have best prices to pick the product
+							<br><br><br><a href="best_price.html" class="btn">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="grid_4">
+					<div class="banner">
+						<div class="maxheight">
+							<div class="banner_title">
+								<img src="images/icon3.png" alt="">
+								<div class="extra_wrapper">Best
+									<div class="color1">Delivery</div>
+								</div>
+							</div>
+							We delivery the more products from anywhere to anywhere. We are not consider the distance and also we delivery the any products, plastic, glass etc.
+							<br><br><br><a href="best_delivary.html" class="btn">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="c_phone">
+				<div class="container_12">
+					<div class="grid_12">
+						<div class="fa fa-phone"></div>+ 94 777 888 909
+						<span>Contacts Us</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+<!--==============================Content=================================-->
+			<div class="content"><div class="ic">More Website Templates - March 08, 2017!</div>
+				<div id="error"><?php echo $error; ?></div>
+				
+				<div class="container_12">
+					<div class="grid_5">
+						<h3>Complaint Form</h3>
+						
+						<form id="bookingForm" method="post" action="insert_complain.php" onclick="return validateForm();">
+						
+							<div class="fl1">							
+								<strong>Name</strong>
+									<div class="tmInput">
+										<input name="name" placeHolder="Name:" type="text" required AlphaSpecial Length(min=4,max=15) >
+									</div>
+								<strong>Phone No</strong>
+									<div class="tmInput">
+										<input name="phone" placeHolder="phone:" type="number" required JustNumbers >
+									</div>
+							</div>
+							
+							<div class="fl1">
+								<strong>E-mail</strong>
+									<div class="tmInput">
+										<input name="email" placeHolder="Email:" type="email" required Email >
+									</div>
+							</div>							
+						
+							<div class="clear"></div>
+								<strong>Date</strong>
+								<label>
+									<input type="date" name="date"	value=""required data-constraints="@NotEmpty @Required @Date">
+								</label>		
+														
+							<div class="clear"></div>
+								<strong>Discription</strong>
+								<div class="tmTextarea">
+									<textarea name="discription" placeHolder="Discription" required  data-constraints="@NotEmpty @Required @Length(min=20,max=999999)"></textarea>
+								</div>
+							
+							<div class="clear"></div>
+							<div class="btns">
+								<button type="click" name="click" class="btn" >Submit</a>
+								<button type="reset" class="btn">Clear</a>
+							</div>
+							
+						</form>
+						
+<script type="text/javascript">					
+				
+		function validateForm() {
+	var valid = 1;
+			
+/////name validation	
+		
+		var a = document.bookingForm.name.value;
+		if(a==""){
+				alert("Please Enter Your Name");
+				document.bookingForm.name.focus();
+				return false;
+			}
+		if(!isNaN(a)){
+				alert("Please Enter Only Characters");
+				document.bookingForm.name.select();
+				return false;
+			}
+		
+	///////	
+		y=document.bookingForm
+    input=y.name.value
+    if (!(input.length>4)){
+        alert("The field cannot contain  less than 4 characters!")
+        return false
+    }else {
+        return true
+    }
+		////	
+		if ( !document.bookingForm.name.value.match( /^[a-zA-Z- ']+$/ ) || document.bookingForm.name.value.length > 3 ) {
+			alert ( "Please enter valid name." );
+			valid = false;
+		 }
+	
+		if( document.bookingForm.name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.bookingForm.name.focus() ;
+            return false;
+         }
+    
+/////email validation	
+         if( document.bookingForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.bookingForm.email.focus() ;
+            return false;
+         }
+ ////// phone validation   
+
+		var num=document.bookingForm.name.value;  
+			if (isNaN(num)){  
+			document.getElementById("numloc").innerHTML="Enter Numeric value only";  
+			return false;  
+			}else{  
+			return true;  
+		}  
+		/////
+         if( document.bookingForm.phone.value == "" || isNaN( document.bookingForm.phone.value ) || document.bookingForm.phone.value.length != 10 )
+         {
+            alert( "Please provide a valid phone number in the format 11 numbers. ");
+            document.bookingForm.phone.focus() ;
+            return false;
+         }
+			
+		///////
+		var phone = document.forms["bookingForm"]["phone"].value;
+        var phoneNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+            if(phone.value.match(phoneNum)) {
+                return true;
+            }
+            else {
+                document.getElementById("phone").className = document.getElementById("phone").className + " error";
+                return false;
+            }
+    
+}
+
+//Validate2
+		function ValidateContactForm()
+{
+    var name = document.bookingForm.name;
+    var email = document.bookingForm.email;
+    var phone = document.bookingForm.phone;
+    var comment = document.bookingForm.discription;
+
+    if (name.value == "")
+    {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+    
+    if (email.value == "")
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf("@", 0) < 0)
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+    if (email.value.indexOf(".", 0) < 0)
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+
+    if ((nocall.checked == false) && (phone.value == ""))
+    {
+        window.alert("Please enter your phone number.");
+        phone.focus();
+        return false;
+    }
+
+    
+    if (discription.value == "")
+    {
+        window.alert("Please provide a detailed description or comment.");
+        discription.focus();
+        return false;
+    }
+    return true;
+}
+		
+			
+		</script>
+						
+					</div>
+					<div class="grid_6 prefix_1">
+						<a href="index2.html" class="type"><img src="images/motorByke.jpg"  alt=""><span class="type_caption">Motorbike</span></a>
+						<a href="index2.html" class="type"><img src="images/van1.jpg" alt=""><span class="type_caption">Van</span></a>
+						<a href="index2.html" class="type"><img src="images/lorry.jpg" alt=""><span class="type_caption">Lorry</span></a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+<!--==============================footer=================================-->
+		<footer>
+			<div class="container_12">
+				<div class="grid_12">
+					<div class="f_phone"><span>Call Us:</span> +94 777 888 909</div>
+					<div class="socials">
+						<a href="https://www.twitter.com" class="fa fa-twitter"></a>
+						<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+						<a href="https://www.gmail.com" class="fa fa-google-plus"></a>
+					</div>
+					<div class="copy">
+						<div class="st1">
+						<div class="brand">FLE<span class="color1">ET</span>O </div>
+						&copy; 2017	| <a href="#">Privacy Policy</a> </div> Website designed by koshila dilrukshi priyadarshani</a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</footer>	
+	</body>
+</html>
